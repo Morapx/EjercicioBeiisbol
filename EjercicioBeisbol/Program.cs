@@ -12,8 +12,8 @@ namespace EjercicioBeisbol
         {
             List<Equipo> grupos = new List<Equipo>();
 
-            Equipo Multis = new Equipo("Multis");
-            Equipo Mecatronicos = new Equipo("Mecatronicos");
+            Equipo Multis = new Equipo("Multis", "Obregon", "Adan");
+            Equipo Mecatronicos = new Equipo("Mecatronicos", "Hermosillo", "Memo");
 
             grupos.Add(Multis);
             grupos.Add(Mecatronicos);
@@ -40,34 +40,38 @@ namespace EjercicioBeisbol
 
 
 
-            Multis.Jugadorees.Add(Pepe);
-            Multis.Jugadorees.Add(Gonzalo);
-            Multis.Jugadorees.Add(Ricardo);
-            Multis.Jugadorees.Add(Milos);
-            Multis.Jugadorees.Add(Eduardo);
-            Multis.Jugadorees.Add(Miguel);
-            Multis.Jugadorees.Add(Mario);
-            Multis.Jugadorees.Add(Luigi);
-            Multis.Jugadorees.Add(Jaime);
+            Multis.Jugador.Add(Pepe);
+            Multis.Jugador.Add(Gonzalo);
+            Multis.Jugador.Add(Ricardo);
+            Multis.Jugador.Add(Milos);
+            Multis.Jugador.Add(Eduardo);
+            Multis.Jugador.Add(Miguel);
+            Multis.Jugador.Add(Mario);
+            Multis.Jugador.Add(Luigi);
+            Multis.Jugador.Add(Jaime);
 
-            Mecatronicos.Jugadorees.Add(Jorge);
-            Mecatronicos.Jugadorees.Add(Gorge);
-            Mecatronicos.Jugadorees.Add(Waluigi);
-            Mecatronicos.Jugadorees.Add(Mike);
-            Mecatronicos.Jugadorees.Add(Rolo);
-            Mecatronicos.Jugadorees.Add(Jose);
-            Mecatronicos.Jugadorees.Add(Bryan);
-            Mecatronicos.Jugadorees.Add(Sam);
-            Mecatronicos.Jugadorees.Add(Sumo);
+            Mecatronicos.Jugador.Add(Jorge);
+            Mecatronicos.Jugador.Add(Gorge);
+            Mecatronicos.Jugador.Add(Waluigi);
+            Mecatronicos.Jugador.Add(Mike);
+            Mecatronicos.Jugador.Add(Rolo);
+            Mecatronicos.Jugador.Add(Jose);
+            Mecatronicos.Jugador.Add(Bryan);
+            Mecatronicos.Jugador.Add(Sam);
+            Mecatronicos.Jugador.Add(Sumo);
 
-            foreach (Equipo equipo in equipo)
+            foreach (Equipo Equipos in grupos)
             {
-                Console.WriteLine("Grupos" + grupo.Codigo);
-                Console.WriteLine("Materia" + grupo.Materia);
-                Console.WriteLine("Lista de alumnos");
-                foreach (Alumno alumno in grupo.Alumno)
+                Console.WriteLine("Ciudad: " + Equipos.Ciudad);
+                Console.WriteLine("Entrenador: " + Equipos.Entrenador);
+                Console.WriteLine("Nombre: " + Equipos.Nombre);
+                Console.WriteLine("----------------------------------------------------------------------------------------------------------");
+                Console.WriteLine("*Lista de Jugadores*");
+    
+                foreach (Jugadores Ricky in Equipos.Jugador) 
                 {
-                    Console.WriteLine("*" + alumno.Nombre);
+                    Console.WriteLine("*" + Ricky.Nombre);
+                    Console.WriteLine("*" + Ricky.Numero);
                 }
             }
 

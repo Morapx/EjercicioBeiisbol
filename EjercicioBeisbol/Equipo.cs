@@ -13,23 +13,24 @@ namespace EjercicioBeisbol
         public string Ciudad { get; set; }
 
         public string Entrenador { get; set; }
-        public string Jugadorees { get; set; }
 
-        public List<Jugadores>
+        public List<Jugadores> Jugador { get; set; }
 
-        public Jugadores()
+        public Equipo()
         {
-            Nombre = "nombre";
+            Nombre = "nombre: ";
             Ciudad = "Sin ciudad";
                 Entrenador = "Sin entrenado";
-            Jugadores = "9"
+          
         }
 
-        public Jugadores(string nombre)
+        public Equipo(string nombre, string ciudad, string entrenador)
         {
             Nombre = nombre;
-            Ciudad = "sin ciudad";
-            Entrenador = "Sin entrenador";
-            Jugadores = "9";
+            Ciudad = ciudad;
+            Entrenador = entrenador;
+            Jugador = new List<Jugadores>();
+
         }
+    }
 }
